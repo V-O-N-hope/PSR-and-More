@@ -1,22 +1,16 @@
 <?php
 
-spl_autoload_register(function ($class_name) {
-    include $class_name . '.php';
-});
+declare(strict_types=1);
 
-$cat = new Cat();
-$dog = new Dog();
-$bird = new Bird();
+include "vendor/autoload.php";
+include "src/Logger.php";
 
+use App\Logger;
 
-$cat->voice();
-$cat->eat();
-$cat->sleep();
+$logger = new Logger("app.log");
 
-$dog->voice();
-$dog->eat();
-$dog->sleep();
+$logger->log('info', 'This is an informational message');
+$logger->log('warning', 'This is a warning message');
+$logger->log('error', 'This is an error message');
+$logger->log('debug', 'This is a debug message');
 
-$bird->voice();
-$bird->eat();
-$bird->sleep();
