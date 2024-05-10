@@ -1,16 +1,19 @@
 <?php
 
-declare(strict_types=1);
+//declare(strict_types=1);
+//
+//include "vendor/autoload.php";
+//include "src/Logger.php";
+//
+//use App\Logger;
+//
+//$logger = new Logger("app.log");
+//
+//$logger->log('info', 'This is an informational message');
+//$logger->log('warning', 'This is a warning message');
+//$logger->log('error', 'This is an error message');
+//$logger->log('debug', 'This is a debug message');
 
-include "vendor/autoload.php";
-include "src/Logger.php";
+$a = 5;
 
-use App\Logger;
-
-$logger = new Logger("app.log");
-
-$logger->log('info', 'This is an informational message');
-$logger->log('warning', 'This is a warning message');
-$logger->log('error', 'This is an error message');
-$logger->log('debug', 'This is a debug message');
-
+echo $a + 5;
