@@ -9,6 +9,12 @@
         <Configuration>
           <option name="path" value="$PROJECT_DIR$/public/tests" />
         </Configuration>
+        <Configuration>
+          <option name="path" value="$PROJECT_DIR$/public/tests" />
+        </Configuration>
+        <Configuration>
+          <option name="path" value="$PROJECT_DIR$/public/tests" />
+        </Configuration>
       </list>
     </option>
   </component>

@@ -35,3 +35,8 @@ Run:
 If all works, visit http://localhost and you`ll see a webpage and some notifications on your mail address   
 
 Have a nice day!
+
+
+PS: Example of static analysis using psalm lib
+
+<img height="200" src="analysis.png" />

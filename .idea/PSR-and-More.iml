@@ -7,6 +7,35 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/public/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/public/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/amphp/amp" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/amphp/byte-stream" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/dnoegel/php-xdg-base-dir" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/doctrine/deprecations" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/felixfbecker/advanced-json-rpc" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/felixfbecker/language-server-protocol" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/fidry/cpu-core-counter" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/netresearch/jsonmapper" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/phpdocumentor/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/phpmailer/phpmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/phpstan/phpdoc-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/spatie/array-to-xml" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/symfony/filesystem" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/vimeo/psalm" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/webmozart/assert" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

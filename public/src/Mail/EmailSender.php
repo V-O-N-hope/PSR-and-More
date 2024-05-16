@@ -23,7 +23,7 @@ class EmailSender
         $this->mailer->Port = 587;
     }
 
-    public function send(string $messageType, string $recipient)
+    public function send(string $messageType, string $recipient) : void
     {
         try {
             $this->mailer->setFrom('ksisdrive@gmail.com', 'Mikita');
