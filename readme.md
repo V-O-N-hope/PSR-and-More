@@ -1,27 +1,37 @@
 Task:
 
-Разработайте класс "Logger" в соответствии с PSR-3.
 
-Реализуйте интерфейс Psr\Log\LoggerInterface.
+Создайте класс "EmailSender" в соответствии с PSR-4.
 
-Определите методы log(), info(), warning(), error(), debug().
+Определите пространство имен App\Mail.
 
-Добавьте возможность форматирования лог-сообщения с использованием шаблонов.
+Реализуйте метод send(), который отправляет электронное письмо с использованием SMTP-сервера.
 
-Зарегистрируйте логгер в приложении и записывайте сообщения в различные каналы (например, консоль, файл).
+Добавьте поддержку различных типов сообщений (например, приветственное письмо, письмо с напоминанием, письмо с уведомлением).
+
+Используйте класс EmailSender для отправки тестового письма.
 
 
 Requirements:
 
     OS with the Docker installed on it
+    Gmail account with allowing password signin in applications
 
+Pre Steps:
+
+    Get your gmail email
+    Set a password for email to use in third party applications
+    In public/src/Mail/EmailSender.php set your mail and password in construct in fields 
+        $this->mailer->Username = '';
+        $this->mailer->Password = '';
+    In public/index.php set a mail of your recipient
 
 Run:
 
     cd ./docker
-    docker compose up -d
+    docker compose up -d --build
 
 
-If all works, visit http://localhost and you`ll see a webpage
+If all works, visit http://localhost and you`ll see a webpage and some notifications on your mail address   
 
 Have a nice day!
