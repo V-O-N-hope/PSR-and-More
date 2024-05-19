@@ -1,6 +1,10 @@
 <?php
 
-class Cat implements Animal
+declare(strict_types=1);
+
+namespace src\Animal;
+
+class Cat implements AnimalInterface
 {
 
     function eat(): void

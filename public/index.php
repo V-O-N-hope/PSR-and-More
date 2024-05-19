@@ -1,22 +1,35 @@
 <?php
 
+declare(strict_types= 1);
+
+use src\Animal\Dog;
+use src\Animal\Bird;
+use src\Animal\Cat;
+
 spl_autoload_register(function ($class_name) {
-    include $class_name . '.php';
+    //Почему это работает?
+    $global_path = sprintf('%s.php', str_replace('\\', '/', $class_name));
+
+    // //а это нет
+    // $global_path2 = sprintf('%s.php', $class_name);
+
+    // // а тутт понятно.., бред ведь))
+    // echo sprintf('%s != %s <br>', $global_path, $global_path2);
+
+    if (file_exists($global_path)) {
+        include $global_path;
+    }
 });
 
-$cat = new Cat();
-$dog = new Dog();
-$bird = new Bird();
+function iterate_animals(array $animals): void{
+    foreach ($animals as $animal) {
+        $animal->voice();
+        $animal->eat();
+        $animal->sleep();
+    }    
+}
 
 
-$cat->voice();
-$cat->eat();
-$cat->sleep();
+$animals = [new Cat(), new Dog(), new Bird()];
 
-$dog->voice();
-$dog->eat();
-$dog->sleep();
-
-$bird->voice();
-$bird->eat();
-$bird->sleep();
+iterate_animals($animals);
