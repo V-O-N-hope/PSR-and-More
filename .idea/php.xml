@@ -49,11 +49,6 @@
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>
-  <component name="Psalm">
-    <Psalm_settings>
-      <PsalmConfiguration tool_path="$PROJECT_DIR$/public/vendor/bin/psalm" />
-    </Psalm_settings>
-  </component>
   <component name="PsalmOptionsConfiguration">
     <option name="config" value="$PROJECT_DIR$/public/psalm.xml" />
     <option name="findUnusedCode" value="true" />

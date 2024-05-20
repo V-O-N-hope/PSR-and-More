@@ -2,6 +2,10 @@ services:
 
   php:
     build: ./php
+    environment:
+      - SMTP_PORT=1025
+      - SMTP_HOST=mail
+      - SMTP_AUTH=false
     ports:
       - 80:80
     volumes:
