@@ -8,7 +8,7 @@ use src\Animal\Cat;
 
 spl_autoload_register(function ($class_name) {
     //Почему это работает?
-    $global_path = sprintf('%s.php', str_replace('\\', '/', $class_name));
+    $global_path = sprintf('%s.php', str_replace('\\', DIRECTORY_SEPARATOR, $class_name));
 
     // //а это нет
     // $global_path2 = sprintf('%s.php', $class_name);
