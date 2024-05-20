@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use App\Mail\EmailSender;
-require 'vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 $from = 'me@cool.com';
 $to = 'you@cool.com';
