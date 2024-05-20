@@ -8,5 +8,11 @@ services:
       - ../:/var/www/html
     working_dir: /var/www/html/public
     entrypoint: ["php", "-S", "0.0.0.0:80"]
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+    depends_on:
+      - mail
+
+  mail:
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025
+      - 8025:8025

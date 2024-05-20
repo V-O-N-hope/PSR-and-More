@@ -15,45 +15,38 @@ class EmailSender
     {
         $this->mailer = new PHPMailer(true);
         $this->mailer->isSMTP();
-        $this->mailer->Host = 'smtp.gmail.com';
+        $this->mailer->Host = 'mail';
         $this->mailer->SMTPAuth = true;
-        $this->mailer->Username = '';
-        $this->mailer->Password = '';
-        $this->mailer->SMTPSecure = 'tls';
-        $this->mailer->Port = 587;
+        $this->mailer->Port = 1025;
     }
 
-    public function send(string $messageType, string $recipient) : void
+    public function send(string $from, string $to, string $subject, string $body): void
     {
         try {
-            $this->mailer->setFrom('ksisdrive@gmail.com', 'Mikita');
-            $this->mailer->addAddress($recipient);
-            $this->mailer->addReplyTo('ksisdrive@gmail.com', 'Mikita');
-            $this->mailer->isHTML(true);
-
-            switch ($messageType) {
-                case 'welcome':
-                    $this->mailer->Subject = 'Добро пожаловать!';
-                    $this->mailer->Body = 'Привет! Добро пожаловать на наш сайт!';
-                    break;
-                case 'reminder':
-                    $this->mailer->Subject = 'Напоминание';
-                    $this->mailer->Body = 'Напоминаем вам о событии X.';
-                    break;
-                case 'notification':
-                    $this->mailer->Subject = 'Уведомление';
-                    $this->mailer->Body = 'У вас новое уведомление.';
-                    break;
-                default:
-                    $this->mailer->Subject = "No subject message";
-                    $this->mailer->Body = 'No body message';
-                    break;
-            }
-
+            $this->mailer->setFrom($from);
+            $this->mailer->addAddress($to);
+            $this->mailer->Subject = $subject;
+            $this->mailer->Body = $body;
             $this->mailer->send();
-            echo 'Сообщение отправлено! <br>';
-        } catch (Exception $e) {
-            echo "Ошибка отправки сообщения: {$this->mailer->ErrorInfo} <br>";
+
+            echo sprintf('message with subject [%s] and body [%s] was successfully sent<br>', $subject, $body);
+        } catch (Exception $exception) {
+            echo $exception->getMessage();
         }
+    }
+
+    public function sendWelcome(string $from, string $to): void
+    {
+        $this->send($from, $to, 'Welcome', 'Greetings');
+    }
+
+    public function sendReminder(string $from, string $to): void
+    {
+        $this->send($from, $to, 'Reminder', 'You`ve lost some details');
+    }
+
+    public function sendNotification(string $from, string $to): void
+    {
+        $this->send($from, $to, 'Notification', 'Notifying you that this task`ve been done');
     }
 }

@@ -1,14 +1,24 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
+declare(strict_types=1);
+
 use App\Mail\EmailSender;
+require 'vendor/autoload.php';
 
-include_once ("vendor/autoload.php");
+$from = 'me@cool.com';
+$to = 'you@cool.com';
 
-$emailSender = new EmailSender();
+$mailer = new EmailSender();
 
-$emailSender->send('welcome', 'retdarkw@gmail.com');
+$functions = [
+    'sendWelcome',
+    'sendReminder',
+    'sendNotification'
+];
 
-$emailSender->send('reminder', 'retdarkw@gmail.com');
 
-$emailSender->send('notification', 'retdarkw@gmail.com');
+$mailer->send($from, $to, 'First sending', 'Hiiiiiiiiiiiii!');
+
+foreach ($functions as $function){
+    $mailer->$function($from, $to);
+}
